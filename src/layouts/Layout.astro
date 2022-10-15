@@ -1,0 +1,53 @@
+---
+import '../style/global.css'
+
+import '@fontsource/heebo/400.css'
+import '@fontsource/heebo/600.css'
+import '@fontsource/jetbrains-mono/400.css'
+
+export interface Props {
+  title: string
+}
+
+const { title } = Astro.props
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+
+    <script is:inline>
+      if (
+        localStorage.theme === 'dark' ||
+        (!('theme' in localStorage) &&
+          window.matchMedia('(prefers-color-scheme: dark)').matches)
+      ) {
+        document.documentElement.classList.add('dark')
+        localStorage.setItem('theme', 'dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+        localStorage.setItem('theme', 'light')
+      }
+
+      window
+        .matchMedia('(prefers-color-scheme: dark)')
+        .addEventListener('change', function (e) {
+          const colorScheme = e.matches ? 'dark' : 'light'
+
+          if (colorScheme === 'dark') {
+            localStorage.setItem('theme', 'dark')
+          } else {
+            localStorage.setItem('theme', 'light')
+          }
+        })
+    </script>
+  </body>
+</html>
