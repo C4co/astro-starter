@@ -1,3 +1,7 @@
 .astro-code {
-  @apply !bg-slate-50 border w-full max-w-full min-w-0 border-slate-200;
+  @apply !bg-zinc-800
+  rounded-lg
+  w-full
+  max-w-full
+  min-w-0;
 }
