@@ -2,9 +2,6 @@
   @apply
 !bg-slate-800
   rounded-none
-  w-full
-  max-w-full
-  min-w-0;
 }
 
 .bg {
