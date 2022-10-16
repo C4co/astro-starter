@@ -56,3 +56,40 @@ let family = marry(
   }
 )
 ```
+
+---
+
+<div class="text-red-400"> Hello world! </div>
+
+```svelte
+<script lang="ts">
+	let status: 'ok' | 'warn' | 'danger' = 'ok'
+</script>
+
+<div
+	class="status"
+	class:ok={status === 'ok'}
+	class:warn={status === 'warn'}
+	class:danger={status === 'danger'}
+>
+	{status}
+</div>
+
+<style lang="postcss">
+	.status {
+		@apply p-2 text-white rounded;
+	}
+
+	.ok {
+		@apply bg-green-600;
+	}
+
+	.warn {
+		@apply bg-green-600;
+	}
+
+	.danger {
+		@apply bg-red-500;
+	}
+</style>
+```
