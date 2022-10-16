@@ -9,6 +9,8 @@ const { frontmatter } = Astro.props
     class={`
       flex-1
       prose
+      prose-blue
+      prose-slate
       dark:prose-invert
       md
     `}
@@ -21,8 +23,6 @@ const { frontmatter } = Astro.props
   /* prettier-ignore */
   .md {
     @apply
-    prose-blue
-    prose-slate
     max-w-[800px]
     min-w-0
     m-auto
