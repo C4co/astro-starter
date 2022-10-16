@@ -8,6 +8,7 @@ export default defineConfig({
   markdown: {
     shikiConfig: {
       theme: 'material-palenight',
+      wrap: true,
     },
   },
   integrations: [tailwind(), mdx(), svelte()],
