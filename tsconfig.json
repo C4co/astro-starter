@@ -5,6 +5,7 @@
     "paths": {
       "@/components": ["src/components/index"],
       "@/icons": ["src/icons/index"],
+      "@/layouts": ["src/layouts/index"],
     }
   },
 }
