@@ -1,36 +1,32 @@
 ---
 import Layout from './Layout.astro'
-import { Menu, Footer } from '@/components'
 
 const { frontmatter } = Astro.props
 ---
 
 <Layout title={frontmatter.title}>
-  <Menu />
-
-  <main
-    class="w-full min-h-screen dark:bg-slate-900 flex justify-center py-[40px] px-4"
+  <div
+    class={`
+      flex-1
+      prose
+      dark:prose-invert
+      md
+    `}
   >
-    <div class="prose md">
-      <slot />
-    </div>
-  </main>
-
-  <Footer />
+    <slot />
+  </div>
 </Layout>
 
 <style lang="postcss">
   /* prettier-ignore */
-
   .md {
     @apply
     prose-blue
     prose-slate
-    prose-headings:text-slate-800
-    text-slate-600
-    max-w-[720px]
-    min-w-0;
-
-    dark: prose-invert;
+    max-w-[800px]
+    min-w-0
+    m-auto
+    py-[50px]
+    px-4;
   }
 </style>
