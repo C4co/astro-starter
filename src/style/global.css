@@ -1,7 +1,29 @@
 .astro-code {
-  @apply !bg-zinc-800
-  rounded-lg
+  @apply
+!bg-slate-800
+  rounded-none
   w-full
   max-w-full
   min-w-0;
+}
+
+.bg {
+  @apply
+  bg-white
+
+  dark:bg-slate-900;
+}
+
+.border--color {
+  @apply
+  border-slate-200
+
+  dark:border-slate-800
+}
+
+.text--color {
+  @apply
+  text-slate-700
+
+  dark:text-slate-400
 }
