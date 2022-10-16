@@ -2,6 +2,17 @@
 
 >Astro build starter project
 
+
+clone project
+```
+git clone https://astro-starter-project.netlify.app/ [site-name]
+```
+
+with gh cli
+```
+gh repo clone c4co/astro-starter [site-name]
+```
+
 ### Stack
 
 🚀 [Astro build](https://astro.build/)
@@ -12,6 +23,7 @@
 
 📝 [MDX](https://mdxjs.com/)
 
+---
 
 ### Deploy
 
