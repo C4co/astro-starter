@@ -5,28 +5,7 @@ const { frontmatter } = Astro.props
 ---
 
 <Layout title={frontmatter.title}>
-  <div
-    class={`
-      flex-1
-      prose
-      prose-blue
-      prose-slate
-      dark:prose-invert
-      md
-    `}
-  >
+  <div class="mdx">
     <slot />
   </div>
 </Layout>
-
-<style lang="postcss">
-  /* prettier-ignore */
-  .md {
-    @apply
-    max-w-[800px]
-    min-w-0
-    m-auto
-    py-[50px]
-    px-4;
-  }
-</style>

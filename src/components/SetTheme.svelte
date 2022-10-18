@@ -24,7 +24,7 @@
 {#if theme === 'dark'}
   <button
     on:click={setLight}
-    class="w-[28px] h-[28px] rounded-full bg-slate-700 flex justify-center items-center"
+    class="w-[28px] h-[28px] rounded-full bg-neutral-700 flex justify-center items-center"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +42,7 @@
 {#if theme === 'light'}
   <button
     on:click={setDark}
-    class="w-[28px] h-[28px] rounded-full bg-slate-800 flex justify-center items-center"
+    class="w-[28px] h-[28px] rounded-full bg-neutral-800 flex justify-center items-center"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
