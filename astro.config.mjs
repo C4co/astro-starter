@@ -4,12 +4,17 @@ import mdx from '@astrojs/mdx'
 import svelte from '@astrojs/svelte'
 
 // https://astro.build/config
+import netlify from '@astrojs/netlify/functions'
+
+// https://astro.build/config
 export default defineConfig({
   markdown: {
     shikiConfig: {
-      theme: 'nord',
-      wrap: true,
+      theme: 'github-dark',
     },
   },
+
   integrations: [tailwind(), mdx(), svelte()],
+  output: 'server',
+  adapter: netlify(),
 })
