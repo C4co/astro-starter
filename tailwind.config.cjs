@@ -26,7 +26,7 @@ module.exports = {
 
     fontFamily: {
       mono: ['"JetBrains Mono"', 'monospace'],
-      sans: ['"Heebo"', 'sans-serif'],
+      sans: ['"Inter"', 'sans-serif'],
     },
   },
   plugins: [require('@tailwindcss/typography')],
