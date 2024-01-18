@@ -5,7 +5,12 @@ const { frontmatter } = Astro.props
 ---
 
 <Layout title={frontmatter.title}>
-  <div class="mdx py-16">
-    <slot />
-  </div>
+  <article>
+    <div
+      class="border-x border-slate-200 lg:border-none max-w-[800px] prose md:prose-base prose-slate prose-blockquote:text-blue-600 prose-code:text-blue-600 py-[50px] px-6 m-auto"
+    >
+      <p>{frontmatter.date}</p>
+      <slot />
+    </div>
+  </article>
 </Layout>

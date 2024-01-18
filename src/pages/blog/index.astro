@@ -1,0 +1,30 @@
+---
+import { Layout } from '@/layouts'
+
+const AllPosts = await Astro.glob('./*.mdx')
+---
+
+<Layout title="Astro starter">
+  <div class="max-w-[700px] m-auto px-4 py-8">
+    {
+      AllPosts.map((post) => (
+        <article class="flex flex-col gap-4">
+          <div class="flex flex-col gap-1">
+            <h2 class="font-black text-slate-900 text-2xl">{post.frontmatter.title}</h2>
+            <p class="text-slate-500">{post.frontmatter.date}</p>
+          </div>
+          <a href={post.frontmatter.href}>
+            <img src={post.frontmatter.cover} alt={post.frontmatter.title} />
+          </a>
+          <div class="text-lg text-slate-500">
+            <span>{post.frontmatter.description}</span>
+
+            <a class="text-lg text-blue-600 hover:underline" href={post.frontmatter.href}>
+              — Read more...
+            </a>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+</Layout>

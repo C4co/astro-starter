@@ -1,12 +1,10 @@
 ---
-import '../style/global.css'
-import '../style/mdx.css'
+import '../style/reveal.css'
 
-import '@fontsource/heebo/400.css'
-import '@fontsource/heebo/600.css'
+import '@fontsource-variable/inter/slnt.css'
 import '@fontsource/jetbrains-mono/400.css'
 
-import { Menu, Footer } from '@/components'
+import { Navbar, Footer } from '@/components'
 
 export interface Props {
   title: string
@@ -21,8 +19,7 @@ const { title } = Astro.props
     <script is:inline>
       if (
         localStorage.theme === 'dark' ||
-        (!('theme' in localStorage) &&
-          window.matchMedia('(prefers-color-scheme: dark)').matches)
+        (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
       ) {
         document.documentElement.classList.add('dark')
         localStorage.setItem('theme', 'dark')
@@ -43,10 +40,7 @@ const { title } = Astro.props
     <meta name="author" content="Astro starter" />
 
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
     <!-- Open graph -->
 
@@ -73,11 +67,13 @@ const { title } = Astro.props
 
     <!-- App -->
     <meta name="application-name" content="Astro starter" />
+
+    <!-- Transition -->
   </head>
 
   <body>
     <main class="w-full bg min-h-screen flex flex-col justify-between">
-      <Menu />
+      <Navbar />
 
       <slot />
 
